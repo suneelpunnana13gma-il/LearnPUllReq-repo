@@ -5,6 +5,8 @@ Suite Setup            OpenBrowser                 about:Blank                ch
 
 *** Variables ***
 ${PARABANK_URL}        https://parabank.parasoft.com/parabank/index.htm
+${Usermame}
+${Password}
 
 
 
