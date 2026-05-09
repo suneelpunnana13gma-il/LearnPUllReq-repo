@@ -9,7 +9,7 @@ ${PARABANK_URL}        https://parabank.parasoft.com/parabank/index.htm
 
 *** Test Cases ***
 Login to Application    
-    [Documentation]    This is login testcase for parabank website
+    [Documentation]    This is Register testcase for parabank website
     [Tags]             smoke
     GoTo               ${PARABANK_URL}
     ClickText          Register
@@ -28,4 +28,11 @@ Login to Application
     TypeText           Password                    copadouser22               anchor=Confirm
     Typetext           Confirm                     copadouser22               
     ClickText          REGISTER                    anchor=Confirm
+
+Customer Login
+    [Documentation]     This is Customer Login
+    [Tags]              smoke
+    ClickText           Usermame
+    ClickText           Password
+    ClickText           Login
     
