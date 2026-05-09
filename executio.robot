@@ -5,6 +5,8 @@ Suite Setup            OpenBrowser                 about:Blank                ch
 
 *** Variables ***
 ${PARABANK_URL}        https://parabank.parasoft.com/parabank/index.htm
+${Usermame}
+${Password}
 
 
 *** Test Cases ***
@@ -32,7 +34,7 @@ Login to Application
 Customer Login
     [Documentation]     This is Customer Login
     [Tags]              smoke
-    ClickText           Usermame
-    ClickText           Password
+    TypeText            Username           ${Usermame}
+    TypeText            Password          ${Password}
     ClickText           Login
     
