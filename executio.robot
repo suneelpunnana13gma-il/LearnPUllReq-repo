@@ -5,8 +5,7 @@ Suite Setup            OpenBrowser                 about:Blank                ch
 
 *** Variables ***
 ${PARABANK_URL}        https://parabank.parasoft.com/parabank/index.htm
-${Usermame}
-${Password}
+
 
 
 *** Test Cases ***
@@ -28,13 +27,13 @@ Login to Application
     TypeText           SSN                         12345612771
     TypeText           Username                    copadouser22               anchor=SSN:
     TypeText           Password                    copadouser22               anchor=Confirm
-    Typetext           Confirm                     copadouser22               
+    Typetext           Confirm                     copadouser22
     ClickText          REGISTER                    anchor=Confirm
 
 Customer Login
-    [Documentation]     This is Customer Login
-    [Tags]              smoke
-    TypeText            Username           ${Usermame}
-    TypeText            Password          ${Password}
-    ClickText           Login
-    
+    [Documentation]    This is Customer Login
+    [Tags]             smoke
+    TypeText           Username                    ${Usermame}
+    TypeText           Password                    ${Password}
+    ClickText          LOG IN
+
