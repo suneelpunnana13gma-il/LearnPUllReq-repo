@@ -25,7 +25,7 @@ Login to Application
     TypeText           Zip Code                    2769
     TypeText           Phone                       0474387347
     TypeText           SSN                         12345612771
-    TypeText           Username                    copadouser22123             anchor=SSN:
+    TypeText           Username                    copadouser221234             anchor=SSN:
     TypeText           Password                    copadouser2212              anchor=Confirm
     Typetext           Confirm                     copadouser2212
     ClickText          REGISTER                    anchor=Confirm
