@@ -5,8 +5,7 @@ Suite Setup            OpenBrowser                 about:Blank                ch
 
 *** Variables ***
 ${PARABANK_URL}        https://parabank.parasoft.com/parabank/index.htm
-${Username}            copadouser22
-${Password}            copadouser22
+
 
 
 *** Test Cases ***
@@ -26,15 +25,21 @@ Login to Application
     TypeText           Zip Code                    2769
     TypeText           Phone                       0474387347
     TypeText           SSN                         12345612771
-    TypeText           Username                    copadouser22               anchor=SSN:
-    TypeText           Password                    copadouser22               anchor=Confirm
-    Typetext           Confirm                     copadouser22
+    TypeText           Username                    copadouser221              anchor=SSN:
+    TypeText           Password                    copadouser221              anchor=Confirm
+    Typetext           Confirm                     copadouser221
     ClickText          REGISTER                    anchor=Confirm
 
-Customer Login
-    [Documentation]    This is Customer Login
-    [Tags]             smoke
-    TypeText           Username                    ${Username}
-    TypeText           Password                    ${Password}
-    ClickText          LOG IN
+Open New Account
+    [Tags]             Sanity
+    ClickText          Open New Account
+    DropDown           type                        SAVINGS
+    ClickText          Open New Account            anchor=Log Out
+    VerifyText         Congratulations
+    ClickItem          newAccountId
+    DropDown           month                       January
+    ClickText          Go
+    ClickText          Accounts Overview
+
+
 
